@@ -69,21 +69,6 @@ class AppStateInDetailView extends AppState {
   int get hashCode => articel.hashCode;
 }
 
-@immutable
-class AppStateUpdatedPosition extends AppState {
-  final double position;
-  const AppStateUpdatedPosition({
-    required final bool isLoading,
-    required final List<Articel> articels,
-    required final String selectedCategory,
-    required this.position,
-  }) : super(
-          isLoading: isLoading,
-          articels: articels,
-          selectedCategory: selectedCategory,
-        );
-}
-
 extension GetArticels on AppState {
   String get selectedCategory {
     final cls = this;
