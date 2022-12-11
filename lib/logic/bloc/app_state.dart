@@ -17,8 +17,6 @@ abstract class AppState extends Equatable {
 
 @immutable
 class AppStateNewsView extends AppState {
-  // final List<Articel> articels;
-
   const AppStateNewsView({
     required bool isLoading,
     required List<Articel> articels,
@@ -104,17 +102,6 @@ extension GetArticel on AppState {
       return cls.articel;
     } else {
       return null;
-    }
-  }
-}
-
-extension GetPosition on AppState {
-  double get position {
-    final cls = this;
-    if (cls is AppStateUpdatedPosition) {
-      return cls.position;
-    } else {
-      return 0.0;
     }
   }
 }

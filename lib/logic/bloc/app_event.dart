@@ -35,14 +35,3 @@ class AppEventGoToNewsView implements AppEvent {
     required this.countriesData,
   });
 }
-
-@immutable
-class AppEventOnDragHorizonaly implements AppEvent {
-  final int i;
-  // final String category;
-
-  const AppEventOnDragHorizonaly({
-    required this.i,
-    // required this.category,
-  });
-}
